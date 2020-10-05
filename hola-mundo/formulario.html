@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio DOM, Eventos y funciones</title>
+	<script type="text/javascript" src="js/33-ejercicio-DOM.js"></script>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 250px;
+			float: left;
+			margin: 20px;
+		}
+		.dashed{
+			border: 3px dashed black;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<!--
+		1.- Crear formulario campos Nombre, Apellidos y Edad
+		2.- Boton de enviar el formularo evento submit
+		3.- Mostrar datos por pantalla
+		4.- Validacion formulario
+	-->	
+	<h1>Ejercicios DOM, eventos y funciones curso JS</h1>
+
+	<div class="box">
+		<form action="#" method="POST" id="formulario" onsubmit="return false;">
+			<label for="nombre" >Nombre</label><br/>
+			<input type="text" name="nombre" id="i_nombre"/><br/>
+			<label for="apellidos" >Apellidos</label><br/>
+			<input type="text" name="apellidos" id="i_apellidos"/><br/>	
+			<label for="edad">Edad</label><br/>
+			<input type="text" name="edad" id="i_edad"/><br/>
+
+			<button type="submit" value="enviar" id="submit">Enviar</button>
+			
+		</form>
+	</div>
+	<div class="box dashed">
+		<h3>Información del Usuario</h3>
+		<hr>
+		<p id="p_nombre">Nombre   : <spam></spam></p>
+		<p id="p_apellidos">Apellidos: <spam></spam></p>
+		<p id="p_edad">Edad     : <spam></spam></p>
+	</div>	
+</body>
+</html>
