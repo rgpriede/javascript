@@ -33,14 +33,30 @@ $(document).ready(function() {
             .css("color", "orange")
     });
     // focus y blur
+    let datos = $("#datos")
     let nombre = $("#nombre")
+    let sigueme = $("#sigueme")
     nombre.focus(function() {
         $(this).css("border", "4px solid green")
     })
     nombre.blur(function() {
         $(this).css("border", "1px solid #ccc")
-
-        $("#datos").text($(this).val()).show()
+        datos.text($(this).val()).show()
     })
 
+    // mouseDown y mouseUp
+    datos.mousedown(function() {
+        $(this).css("border-color", "grey")
+    })
+    datos.mouseup(function() {
+            $(this).css("border-color", "black")
+        })
+        // mousemove perseguir al raton
+    $(document).mousemove(function() {
+        $("body").css("cursor", "none") // oculta el cursor
+        console.log("eje X:" + event.clientX)
+        console.log("eje Y" + event.clientY)
+        sigueme.css("left", event.clientX)
+            .css("top", event.clientY)
+    })
 });
