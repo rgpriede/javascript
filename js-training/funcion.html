@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .centrado {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function dia_de_hoy() {
+            let hoy = new Date()
+            document.write(hoy.toDateString())
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="centrado">Ejemplo de funciones</h1>
+    <p>Hoy es día:<strong>
+        <script>
+            dia_de_hoy()
+        </script>
+    </strong>
+    </p>
+</body>
+
+</html>
