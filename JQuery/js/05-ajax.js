@@ -29,4 +29,16 @@ $(document).ready(function($) {
             console.log(response);
         }
     });
+    $('#formulario').submit(function(e) {
+        e.preventDefault()
+        let data = {
+            name: $('input[name = "name"]').val(),
+            movies: $('input[name = "movies"]').val()
+        }
+        console.log(data)
+        $.post($(this).attr("action"), data, function(response) {
+            console.log(response)
+        })
+        return false
+    })
 })
