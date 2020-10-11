@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.theme.min.css" />
     <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/06-interface.js"></script>
     <title>Interface</title>
@@ -17,24 +20,115 @@
             margin: 20px;
             float: left;
         }
+        
+        .listaSeleccionable li {
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+        
+        ul .ui-selecting {
+            background: green
+        }
+        
+        ul .ui-selected {
+            background: blue
+        }
+        
+        #area {
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+        }
+        
+        #elementoMovido {
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+        }
+        
+        .cajaEfectos {
+            background: pink;
+            float: none;
+        }
     </style>
 </head>
 <h1>jQuery UI</h1>
-<div class="elemento">
-    <p>Hola soy un elemento de la web1</p>
+<h2>Cuadrod de dialogo</h2>
+<hr/>
+<button id="lanzar">PopUp</button>
+<div id="popup" title="Estas seguro?" style='display:none'>
+    <p>Si continuas en el curso aprenderas mucho sobre javascript</p>
 </div>
-<div class="elemento">
-    <p>Hola soy un elemento de la web2</p>
-</div>
-<div class="elemento">
-    <p>Hola soy un elemento de la web3</p>
-</div>
-<div class="elemento">
-    <p>Hola soy un elemento de la web4</p>
-</div>
+<hr/>
+<h3>Carpetas</h3>
+<div id="folder">
+    <ul>
+        <li>
+            <a href="#tabs-1">Datos Personales</a>
+        </li>
+        <li>
+            <a href="#tabs-2">Historial</a>
+        </li>
+        <li>
+            <a href="#tabs-3">Comentarios</a>
+        </li>
+    </ul>
+    <div id="tabs-1">
+        Hola soy la primera carpeta
+    </div>
 
-<body>
+    <div id="tabs-2">
+        Historial de la cuenta
+    </div>
 
-</body>
+    <div id="tabs-3">
+        Peticiones realizadas
+    </div>
+    <hr/>
+
+    <p>calendario</p>
+    <input type="text" id="calendario">
+    <hr/>
+    <h3>ToolTip</h3>
+    <a href="#" class="mostrar" title="Acceder a la seccion de mis datos de esta web">Mis datos</a>
+    <a href="#" class="mostrar" title="Identificacion">Identificarse</a>
+    <hr/>
+    <button id="mostrar">Mostrar</button>
+    <div class="elemento cajaEfectos">
+
+    </div>
+    <ul class="listaSeleccionable">
+        <li>SuperMario 2020</li>
+        <li>GTA 5</li>
+        <li>Need for Speed</li>
+        <li>Crash</li>
+        <li>Zelda</li>
+    </ul>
+    <div id="area">
+
+    </div>
+    <br>
+    <div id="elementoMovido">
+
+    </div>
+    <div class="elemento">
+        <p>Hola soy un elemento de la web1</p>
+    </div>
+    <div class="elemento">
+        <p>Hola soy un elemento de la web2</p>
+    </div>
+    <div class="elemento">
+        <p>Hola soy un elemento de la web3</p>
+    </div>
+    <div class="elemento">
+        <p>Hola soy un elemento de la web4</p>
+    </div>
+
+    <body>
+
+    </body>
 
 </html>
