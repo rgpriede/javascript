@@ -29,6 +29,7 @@ $(document).ready(function($) {
             console.log(response);
         }
     });
+    // forma de realizar desde formulario directo.
     $('#formulario').submit(function(e) {
         e.preventDefault()
         let data = {
@@ -38,6 +39,8 @@ $(document).ready(function($) {
         console.log(data)
         $.post($(this).attr("action"), data, function(response) {
             console.log(response)
+        }).done(function() {
+            alert("Registro guardado")
         })
         return false
     })
